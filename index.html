@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nordium | Desenvolvimento de Sites Profissionais</title>
+<meta name="description" content="A Nordium desenvolve sites modernos e estratégicos para fortalecer sua marca, ampliar sua presença digital e conectar sua empresa a novas oportunidades.">
+<meta property="og:title" content="Nordium | Desenvolvimento de Sites Profissionais">
+<meta property="og:description" content="Sites modernos e estratégicos para fortalecer sua marca e ampliar sua presença digital.">
+<meta property="og:type" content="website"><meta property="og:locale" content="pt_BR">
+<meta name="theme-color" content="#071A3D">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+:root{--bg:#fff;--bg2:#F7F9FC;--fg:#071A3D;--mut:#667085;--line:#E7EBF2;--tint:#DCE5F7;--btn:#071A3D;--btnt:#fff;--navy:#071A3D;--navy2:#0B2457;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#050F26;--bg2:#08183A;--fg:#F7F9FC;--mut:#9AA7C0;--line:#15275A;--tint:#17316F;--btn:#F7F9FC;--btnt:#071A3D}}
+:root[data-theme="dark"]{--bg:#050F26;--bg2:#08183A;--fg:#F7F9FC;--mut:#9AA7C0;--line:#15275A;--tint:#17316F;--btn:#F7F9FC;--btnt:#071A3D}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 84px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.65 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+h1,h2,h3{margin:0;letter-spacing:-.03em;line-height:1.08;font-weight:800}
+h1{font-size:clamp(2.3rem,6vw,4.4rem)}h2{font-size:clamp(1.8rem,4vw,3rem)}h3{font-size:1.15rem;letter-spacing:-.01em;font-weight:700}
+p{margin:0}a{color:inherit}
+.w{width:min(1160px,100% - 40px);margin:auto}
+section{padding:clamp(72px,10vw,128px) 0}
+.eb{font:600 12px Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin-bottom:20px;display:block}
+.mut{color:var(--mut)}
+.hl{background:none}
+.ic{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+:focus-visible{outline:2px solid #4B73D6;outline-offset:3px;border-radius:6px}
+.b{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 26px;border-radius:999px;font:600 15px Inter,sans-serif;border:1px solid transparent;text-decoration:none;cursor:pointer;transition:background .2s,transform .15s,border-color .2s,color .2s}
+.b .ic{width:18px;height:18px;transition:transform .2s}.b:hover .ic{transform:translateX(3px)}
+.bp{background:var(--btn);color:var(--btnt)}.bp:hover{opacity:.88}.bp:active{transform:translateY(1px)}
+.bs{border-color:var(--line);color:var(--fg)}.bs:hover{border-color:var(--fg)}.bs:active{transform:translateY(1px)}
+.bw{background:#fff;color:#071A3D}.bw:hover{background:#DCE5F7}.bw:active{transform:translateY(1px)}
+.b[disabled]{opacity:.45;pointer-events:none}
+/* header */
+.hd{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--bg);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
+.hd.sc{border-color:var(--line)}
+.hd .w{display:flex;align-items:center;justify-content:space-between;height:72px}
+.lg{display:flex;align-items:center;gap:12px;text-decoration:none;font:800 17px Manrope;letter-spacing:.2em}
+.lm{display:block;width:35.3px;height:38px;background:currentColor;-webkit-mask:url(assets/logo-simbolo.png) center/contain no-repeat;mask:url(assets/logo-simbolo.png) center/contain no-repeat}
+nav ul{display:flex;gap:32px;list-style:none;margin:0;padding:0;align-items:center}
+nav a{text-decoration:none;font:500 15px Inter;color:var(--mut);transition:color .2s}nav a:hover{color:var(--fg)}
+.bm{display:none;background:none;border:1px solid var(--line);border-radius:12px;width:46px;height:46px;color:var(--fg);cursor:pointer;align-items:center;justify-content:center}
+.hcta{padding:0 20px;min-height:44px}
+/* hero */
+.hero{padding-top:clamp(48px,7vw,96px);position:relative}
+.hg{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1{max-width:12.5em}
+.hero .sub{margin:28px 0 36px;max-width:34em;color:var(--mut);font-size:1.1rem}
+.acts{display:flex;gap:14px;flex-wrap:wrap}
+.sd{display:flex;align-items:center;gap:12px;margin-top:64px;font:500 13px Inter;color:var(--mut)}
+.sd i{width:1px;height:40px;background:var(--line);position:relative;overflow:hidden}.sd i::after{content:"";position:absolute;left:0;top:-40%;width:1px;height:40%;background:var(--fg);animation:sl 2s infinite ease-in-out}
+@keyframes sl{to{top:100%}}
+.stage{position:relative;padding:0 0 60px 30px}
+.bw2{border:1px solid var(--line);border-radius:14px;background:#fff;overflow:hidden;box-shadow:0 20px 50px -28px rgba(7,26,61,.45);color:#071A3D}
+.bar{display:flex;gap:6px;padding:10px 14px;border-bottom:1px solid #E7EBF2;background:#F7F9FC;align-items:center;font:500 10px Inter;color:#667085}
+.bar b{width:8px;height:8px;border-radius:50%;background:#D5DBE7}
+.sc1{padding:20px;min-height:280px;background:#fff}
+.mn{display:flex;justify-content:space-between;font:700 10px Inter;letter-spacing:.14em;margin-bottom:34px}.mn span{color:#667085;font-weight:500;letter-spacing:0}
+.sc1 h4{margin:0 0 10px;font-size:23px;line-height:1.1;letter-spacing:-.03em;max-width:9em}
+.sc1 p{font-size:11px;color:#667085;max-width:22em;margin-bottom:16px;line-height:1.5}
+.pl{display:inline-block;background:#0B2457;color:#fff;font:600 10px Inter;padding:7px 14px;border-radius:99px}
+.bl{position:absolute;right:20px;bottom:20px;width:34%;aspect-ratio:1;border-radius:10px;background:linear-gradient(135deg,#0B2457,#071A3D)}
+.ph{position:absolute;left:0;bottom:0;width:132px;border-radius:24px;border:5px solid #071A3D;background:#fff;padding:18px 12px;color:#071A3D;box-shadow:0 20px 40px -20px rgba(7,26,61,.6)}
+.ph h5{margin:0 0 6px;font-size:13px;line-height:1.15}.ph p{font-size:8px;line-height:1.4;color:#667085;margin-bottom:10px}
+.ph div{height:60px;border-radius:8px;background:linear-gradient(135deg,#DCE5F7,#0B2457)}
+.tag{position:absolute;right:0;bottom:12px;font:500 11px Inter;color:var(--mut)}
+:root{--hi:url(assets/hero.jpg)}
+.hero{background:linear-gradient(90deg,rgba(5,15,38,.6),rgba(5,15,38,.12) 65%),var(--hi) 60% center/cover no-repeat;color:#fff;padding-bottom:clamp(64px,8vw,104px)}
+.hero .eb,.hero .sub{color:rgba(255,255,255,.78)}
+.hero .bs{color:#fff;border-color:rgba(255,255,255,.45)}.hero .bs:hover{border-color:#fff}
+.hero .sd{color:rgba(255,255,255,.75)}.hero .sd i{background:rgba(255,255,255,.3)}.hero .sd i::after{background:#fff}
+.hero .tag{color:rgba(255,255,255,.8)}
+@media (max-width:900px){.hero{background:linear-gradient(rgba(5,15,38,.62),rgba(5,15,38,.45)),var(--hi) 66% center/cover no-repeat}}
+/* strip */
+.strip{background:var(--navy);color:#fff;padding:clamp(64px,9vw,112px) 0}
+.strip p{font-size:clamp(1.5rem,3.6vw,2.7rem);font-weight:700;letter-spacing:-.025em;line-height:1.2;max-width:22em}
+.strip span{color:#8FA4D1}
+/* problem */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:72px}
+.cols>div{border-top:1px solid var(--line);padding-top:24px}.cols h3{margin-bottom:10px}.cols p{color:var(--mut);font-size:.98rem}
+.cols .n{font:600 12px Inter;color:var(--mut);display:block;margin-bottom:28px}
+.tr{margin-top:56px;font-weight:600;display:flex;align-items:center;gap:10px}
+/* solutions */
+.sol{background:var(--bg2)}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-top:56px}
+.si{background:var(--bg);padding:34px 30px 38px;transition:background .25s}
+.si:hover{background:var(--bg2)}
+.si .ic{margin-bottom:56px;transition:transform .3s}.si:hover .ic{transform:translateY(-4px)}
+.si small{font:600 12px Inter;color:var(--mut)}.si h3{margin:6px 0 10px}.si p{color:var(--mut);font-size:.95rem}
+/* portfolio */
+.pf{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:64px}
+.pi:nth-child(2){margin-top:56px}
+.pi .bw2{transition:transform .35s}.pi:hover .bw2{transform:translateY(-6px)}
+.mk{aspect-ratio:4/3;padding:18px;display:flex;flex-direction:column;justify-content:space-between}
+.mk h4{margin:0;font-size:19px;line-height:1.1;letter-spacing:-.02em}.mk small{font:600 8px Inter;letter-spacing:.14em;opacity:.7}
+.mk div{display:flex;gap:6px}.mk i{flex:1;height:44px;border-radius:6px;background:currentColor;opacity:.12}
+.m1{background:#F7F9FC;color:#0B2457}.m1 h4{font-family:Georgia,serif;font-weight:400}
+.m2{background:linear-gradient(160deg,#071A3D,#0B2457 60%,#1D3E8A);color:#fff}
+.m3{background:#F4EFE6;color:#4A3520}.m3 h4{font-weight:800}
+.pi small.k{font:600 11px Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);display:block;margin:20px 0 8px}
+.pi p{color:var(--mut);font-size:.95rem;margin-top:8px}
+/* diff */
+.df{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px}
+.df .st{position:sticky;top:120px;align-self:start}
+.dl{border-top:1px solid var(--line)}
+.dl div{display:grid;grid-template-columns:48px 1fr;gap:12px;padding:28px 0;border-bottom:1px solid var(--line)}
+.dl small{font:600 12px Inter;color:var(--mut);padding-top:4px}.dl p{color:var(--mut);margin-top:6px}
+/* process */
+.pr{background:var(--navy);color:#fff}
+.pr .eb{color:#8FA4D1}
+.ps{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:72px;position:relative}
+.ps::before{content:"";position:absolute;left:0;right:0;top:7px;height:1px;background:rgba(255,255,255,.18);transform-origin:left;transform:scaleX(0);transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.ps.in::before{transform:scaleX(1)}
+.ps div{position:relative;padding-top:44px}
+.ps div::before{content:"";position:absolute;top:0;left:0;width:15px;height:15px;border-radius:50%;background:var(--navy);border:2px solid #fff}
+.ps small{font:600 12px Inter;color:#8FA4D1;display:block;margin-bottom:10px}.ps p{color:#B9C5E0;margin-top:10px;font-size:.96rem}
+/* about */
+.ab p+p{margin-top:20px}.ab .t p{color:var(--mut)}
+.ry{color:var(--line);width:min(420px,100%)}
+.ry svg{width:100%;display:block;animation:rt 90s linear infinite}
+@keyframes rt{to{transform:rotate(360deg)}}
+/* faq */
+.fq{max-width:820px;margin:56px auto 0;border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:26px 0;font-weight:700;font-size:1.08rem;min-height:56px}
+summary::-webkit-details-marker{display:none}
+summary i{position:relative;width:18px;height:18px;flex:none}
+summary i::before,summary i::after{content:"";position:absolute;left:0;right:0;top:8px;height:2px;background:currentColor;transition:transform .3s}
+summary i::after{transform:rotate(90deg)}
+details[open] summary i::after{transform:rotate(0)}
+details .a{padding:0 40px 28px 0;color:var(--mut)}
+details[open] .a{animation:fd .35s ease}
+@keyframes fd{from{opacity:0;transform:translateY(-6px)}}
+/* cta */
+.cta{background:var(--navy2);color:#fff;position:relative;overflow:hidden}
+.cta .w{position:relative;z-index:1;max-width:860px}
+.cta p{color:#B9C5E0;margin:24px 0 36px;max-width:36em;font-size:1.08rem}
+.cta .ry{position:absolute;right:-120px;top:50%;margin-top:-260px;width:520px;color:rgba(255,255,255,.14)}
+.cta{background:linear-gradient(90deg,rgba(5,15,38,.74),rgba(5,15,38,.38) 70%,rgba(5,15,38,.22)),var(--hi) 0% 88%/220% auto no-repeat,var(--navy2)}
+@media (max-width:900px){.cta{background:linear-gradient(rgba(5,15,38,.72),rgba(5,15,38,.55)),var(--hi) 10% center/cover no-repeat,var(--navy2)}}
+/* footer */
+footer{background:var(--bg2);padding:72px 0 40px;border-top:1px solid var(--line)}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px}
+footer h3{font:600 12px Inter;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-bottom:18px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+footer a{text-decoration:none;color:var(--fg)}footer a:hover{text-decoration:underline}
+.cp{margin-top:56px;padding-top:24px;border-top:1px solid var(--line);color:var(--mut);font-size:.9rem}
+/* reveal */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (max-width:900px){
+.hg,.two,.df,.fg{grid-template-columns:1fr;gap:40px}
+.cols,.sg,.pf{grid-template-columns:1fr}.pi:nth-child(2){margin-top:0}
+.ps{grid-template-columns:1fr;gap:0}.ps::before{left:7px;right:auto;top:0;bottom:0;width:1px;height:auto;transform:scaleY(0);transform-origin:top}.ps.in::before{transform:scaleY(1)}
+.ps div{padding:0 0 36px 44px}
+.df .st{position:static}
+.bm{display:flex}
+nav{position:absolute;left:0;right:0;top:72px;background:var(--bg);border-bottom:1px solid var(--line);visibility:hidden;opacity:0;transform:translateY(-8px);transition:opacity .25s,transform .25s,visibility .25s}
+nav.open{visibility:visible;opacity:1;transform:none}
+nav ul{flex-direction:column;align-items:stretch;gap:0;padding:8px 20px 20px}
+nav li a{display:block;padding:16px 0;border-bottom:1px solid var(--line);font-size:17px}
+.hcta{display:none}.mc{display:inline-flex!important;margin-top:16px}
+.stage{padding-left:0}.cta .ry{opacity:.6;right:-200px}
+}
+.mc{display:none}
+@media (max-width:520px){.acts .b{width:100%}.ph{width:104px}}
+dialog{border:1px solid var(--line);border-radius:20px;padding:40px 32px 32px;width:min(460px,calc(100% - 32px));background:var(--bg);color:var(--fg);font:inherit}
+dialog::backdrop{background:rgba(7,26,61,.65)}dialog[open]{animation:fd .3s ease}
+dialog h3{font-size:1.5rem;letter-spacing:-.02em;margin:0 0 8px}
+.cta dialog p{color:var(--mut);margin:0 0 24px;font-size:1rem;max-width:none}
+.cta dialog .no{margin:20px 0 0;font-size:.9rem}.no a{color:var(--fg)}
+.ch{display:grid;gap:12px}.ch .b{width:100%}
+.x{position:absolute;top:8px;right:8px;width:44px;height:44px;border:0;background:none;color:var(--fg);font-size:28px;line-height:1;cursor:pointer;border-radius:50%}.x:hover{background:var(--bg2)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}.ps::before{transform:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="ar" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i1" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+<symbol id="i2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+<symbol id="i3" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 13h18"/></symbol>
+<symbol id="i4" viewBox="0 0 24 24"><rect x="2" y="5" width="14" height="10" rx="1"/><rect x="18" y="9" width="4" height="10" rx="1"/><path d="M6 19h6"/></symbol>
+<symbol id="i5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+<symbol id="i6" viewBox="0 0 24 24"><path d="M5 3l14 7-6 2-2 6z"/></symbol>
+<symbol id="mn" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+</defs></svg>
+<header class="hd" id="hd"><div class="w">
+<a class="lg" href="#inicio" aria-label="Nordium, início"><span class="lm" role="img" aria-label="Logo Nordium"></span>NORDIUM</a>
+<nav id="nav" aria-label="Principal"><ul>
+<li><a href="#inicio">Início</a></li><li><a href="#solucoes">Soluções</a></li><li><a href="#processo">Processo</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#faq">FAQ</a></li>
+<li class="mc"><a class="b bp" href="#contato">Solicitar orçamento</a></li></ul></nav>
+<a class="b bp hcta" href="#contato">Solicitar orçamento</a>
+<button class="bm" id="bm" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu"><svg class="ic"><use href="#mn"/></svg></button>
+</div></header>
+<main>
+<section class="hero" id="inicio"><div class="w hg">
+<div>
+<span class="eb rv">Estratégia digital · Design · Desenvolvimento</span>
+<h1 class="rv">Sua empresa merece uma <span class="hl">presença digital</span> à altura do seu <span class="hl">potencial.</span></h1>
+<p class="sub rv">Criamos sites modernos, estratégicos e profissionais para fortalecer sua marca, ampliar sua visibilidade e transformar visitantes em novas oportunidades de negócio.</p>
+<div class="acts rv"><a class="b bw" href="#contato">Vamos tirar seu projeto do papel <svg class="ic"><use href="#ar"/></svg></a><a class="b bs" href="#solucoes">Conheça nossas soluções</a></div>
+<div class="sd rv" aria-hidden="true"><i></i>Role para explorar</div>
+</div>
+<div class="stage rv" role="img" aria-label="Demonstração visual de um site em computador e celular">
+<div class="bw2"><div class="bar"><b></b><b></b><b></b><span style="margin-left:10px">conceito-consultoria.exemplo</span></div>
+<div class="sc1"><div class="mn">ARCO<span>Serviços&nbsp;&nbsp;Método&nbsp;&nbsp;Contato</span></div><h4>Decisões claras para negócios em movimento</h4><p>Projeto demonstrativo de um site institucional para consultoria.</p><span class="pl">Agendar conversa</span><div class="bl"></div></div></div>
+<div class="ph"><h5>Decisões claras</h5><p>Versão mobile do projeto demonstrativo.</p><div></div></div>
+<span class="tag">Projeto demonstrativo</span>
+</div></div></section>
+
+<section class="strip"><div class="w"><p class="rv">Mais do que estar na internet. <span>É sobre construir uma presença que trabalha pela sua marca.</span></p></div></section>
+
+<section id="problema"><div class="w">
+<div class="two"><h2 class="rv">Seu próximo cliente pode estar procurando exatamente o que você oferece.</h2>
+<p class="mut rv" style="align-self:end">Em um mercado cada vez mais digital, a forma como sua empresa se apresenta influencia a confiança que transmite. Um site profissional ajuda as pessoas a entenderem seus serviços, conhecerem sua marca e encontrarem um caminho claro para entrar em contato.</p></div>
+<div class="cols">
+<div class="rv"><span class="n">01</span><h3>Visibilidade limitada</h3><p>Sua empresa precisa ser encontrada e ter seus serviços apresentados com clareza no ambiente digital.</p></div>
+<div class="rv"><span class="n">02</span><h3>Falta de credibilidade</h3><p>Uma presença digital desatualizada ou inexistente pode dificultar a construção de confiança com potenciais clientes.</p></div>
+<div class="rv"><span class="n">03</span><h3>Oportunidades desperdiçadas</h3><p>Sem uma experiência digital organizada e chamadas para ação claras, visitantes podem não saber como avançar até a contratação.</p></div>
+</div>
+<a class="tr rv" href="#solucoes" style="text-decoration:none">Veja como a Nordium pode ajudar <svg class="ic" style="width:20px;height:20px"><use href="#ar"/></svg></a>
+</div></section>
+
+<section class="sol" id="solucoes"><div class="w">
+<span class="eb rv">Soluções</span>
+<div class="two"><h2 class="rv">Tudo começa com uma presença digital bem construída.</h2><p class="mut rv" style="align-self:end">Soluções pensadas para apresentar sua empresa com clareza, fortalecer sua marca e facilitar a conquista de novos clientes.</p></div>
+<div class="sg">
+<div class="si rv"><svg class="ic"><use href="#i1"/></svg><small>01</small><h3>Sites institucionais</h3><p>Sites que apresentam a empresa, seus diferenciais, seus serviços e seus canais de contato com uma experiência profissional e organizada.</p></div>
+<div class="si rv"><svg class="ic"><use href="#i2"/></svg><small>02</small><h3>Landing pages estratégicas</h3><p>Páginas focadas em uma oferta, serviço ou campanha, desenvolvidas para comunicar valor e incentivar ações específicas.</p></div>
+<div class="si rv"><svg class="ic"><use href="#i3"/></svg><small>03</small><h3>Sites para negócios e serviços</h3><p>Experiências digitais adaptadas às necessidades de empresas que desejam apresentar seus serviços, destacar seus diferenciais e facilitar o contato comercial.</p></div>
+<div class="si rv"><svg class="ic"><use href="#i4"/></svg><small>04</small><h3>Design responsivo</h3><p>Interfaces preparadas para oferecer uma navegação consistente em celulares, tablets e computadores.</p></div>
+<div class="si rv"><svg class="ic"><use href="#i5"/></svg><small>05</small><h3>Estrutura preparada para SEO</h3><p>Organização técnica e semântica que favorece a compreensão do conteúdo pelos mecanismos de busca, respeitando as boas práticas de SEO.</p></div>
+<div class="si rv"><svg class="ic"><use href="#i6"/></svg><small>06</small><h3>Experiência e conversão</h3><p>Hierarquia de conteúdo, navegação intuitiva e chamadas para ação estrategicamente posicionadas para facilitar o próximo passo do visitante.</p></div>
+</div></div></section>
+
+<section id="demonstracoes"><div class="w">
+<span class="eb rv">Demonstração visual</span>
+<h2 class="rv" style="max-width:14em">Design que transforma a primeira impressão.</h2>
+<div class="pf">
+<article class="pi rv"><div class="bw2" role="img" aria-label="Conceito de site de consultoria"><div class="bar"><b></b><b></b><b></b></div><div class="mk m1"><small>CONSULTORIA</small><h4>Estratégia com método e clareza</h4><div><i></i><i></i><i></i></div></div></div><small class="k">Conceito visual</small><h3>Site institucional · consultoria</h3><p>Objetivo: transmitir autoridade. Direção editorial, com tipografia serifada e muito espaço em branco.</p></article>
+<article class="pi rv"><div class="bw2" role="img" aria-label="Conceito de landing page de tecnologia"><div class="bar"><b></b><b></b><b></b></div><div class="mk m2"><small>PLATAFORMA</small><h4>Automatize o que não precisa de você</h4><div><i></i><i></i><i></i></div></div></div><small class="k">Projeto demonstrativo</small><h3>Landing page · marca de tecnologia</h3><p>Objetivo: levar a uma única ação. Direção escura, com foco em uma oferta e hierarquia direta.</p></article>
+<article class="pi rv"><div class="bw2" role="img" aria-label="Conceito de site de serviços profissionais"><div class="bar"><b></b><b></b><b></b></div><div class="mk m3"><small>ATELIÊ JURÍDICO</small><h4>Atendimento próximo, orientação segura</h4><div><i></i><i></i><i></i></div></div></div><small class="k">Exploração de design</small><h3>Site · serviços profissionais</h3><p>Objetivo: gerar confiança. Direção acolhedora, com tons quentes e caminhos de contato evidentes.</p></article>
+</div></div></section>
+
+<section class="sol"><div class="w df">
+<div class="st"><span class="eb rv">Diferenciais</span><h2 class="rv">Tecnologia com propósito. Design com estratégia.</h2></div>
+<div class="dl">
+<div class="rv"><small>01</small><span><h3>Design pensado para a marca</h3><p>Uma identidade digital coerente com o posicionamento e a personalidade do negócio.</p></span></div>
+<div class="rv"><small>02</small><span><h3>Foco em objetivos reais</h3><p>Cada seção do site deve cumprir uma função na comunicação e na jornada do cliente.</p></span></div>
+<div class="rv"><small>03</small><span><h3>Experiência intuitiva</h3><p>Navegação clara, conteúdo organizado e caminhos de contato acessíveis.</p></span></div>
+<div class="rv"><small>04</small><span><h3>Performance e responsividade</h3><p>Atenção à velocidade, à estabilidade e à adaptação a diferentes dispositivos.</p></span></div>
+<div class="rv"><small>05</small><span><h3>Comunicação transparente</h3><p>Clareza sobre escopo, etapas e expectativas do projeto.</p></span></div>
+<div class="rv"><small>06</small><span><h3>Visão de crescimento</h3><p>Uma presença digital planejada para acompanhar os objetivos comerciais da empresa.</p></span></div>
+</div></div></section>
+
+<section class="pr" id="processo"><div class="w">
+<span class="eb rv">Processo</span><h2 class="rv">Do primeiro contato ao lançamento.</h2>
+<div class="ps rv" id="ps">
+<div><small>01</small><h3>Descoberta</h3><p>Entendemos o negócio, os objetivos, o público e as necessidades do projeto.</p></div>
+<div><small>02</small><h3>Planejamento e design</h3><p>Organizamos a estrutura, definimos a direção visual e planejamos a experiência do usuário.</p></div>
+<div><small>03</small><h3>Desenvolvimento</h3><p>Transformamos o planejamento em um site funcional, responsivo e alinhado à identidade da empresa.</p></div>
+<div><small>04</small><h3>Revisão e lançamento</h3><p>Revisamos o projeto, ajustamos os detalhes e preparamos o site para sua publicação conforme o escopo acordado.</p></div>
+</div></div></section>
+
+<section class="ab" id="sobre"><div class="w two">
+<div><span class="eb rv">Sobre a Nordium</span><h2 class="rv">Acreditamos que toda empresa tem potencial para ir mais longe.</h2><div class="ry rv" style="margin-top:48px" aria-hidden="true"><svg viewBox="-100 -100 200 200" class="rays"></svg></div></div>
+<div class="t rv" style="align-self:center"><p>A Nordium nasceu com uma proposta clara: ajudar empresas a construírem uma presença digital mais profissional, estratégica e alinhada aos seus objetivos.</p><p>Unimos design, tecnologia e visão de negócio para desenvolver experiências digitais que valorizam marcas, apresentam serviços com clareza e criam caminhos mais simples entre empresas e seus potenciais clientes.</p><p>Cada projeto começa com uma compreensão das necessidades do negócio e se transforma em uma solução construída com intenção, cuidado e atenção aos detalhes.</p><p style="color:var(--fg);font-weight:700">Porque um bom site não deve apenas representar sua empresa. Ele deve ajudar sua empresa a se apresentar ao mundo com mais confiança.</p></div>
+</div></section>
+
+<section class="sol" id="faq"><div class="w">
+<h2 class="rv" style="text-align:center">Dúvidas? Vamos esclarecer.</h2>
+<div class="fq rv">
+<details name="f" open><summary>Por que minha empresa precisa de um site profissional?<i></i></summary><div class="a">Um site permite apresentar seus serviços, fortalecer a credibilidade da marca, organizar informações importantes e oferecer um canal digital para que potenciais clientes conheçam sua empresa e entrem em contato.</div></details>
+<details name="f"><summary>O site funcionará em celulares?<i></i></summary><div class="a">Sim. Os projetos devem ser desenvolvidos com layout responsivo, adaptando conteúdo e elementos de navegação a celulares, tablets e computadores.</div></details>
+<details name="f"><summary>Quanto custa desenvolver um site?<i></i></summary><div class="a">O investimento depende do tipo de projeto, da quantidade de páginas, das funcionalidades e das necessidades específicas da empresa. Entre em contato para conversarmos sobre seu projeto e avaliarmos o escopo.</div></details>
+<details name="f"><summary>Quanto tempo leva para desenvolver um site?<i></i></summary><div class="a">O prazo depende da complexidade do projeto, do escopo e da disponibilidade dos materiais e aprovações. As etapas e expectativas podem ser alinhadas durante o planejamento.</div></details>
+<details name="f"><summary>Um site ajuda minha empresa a vender mais?<i></i></summary><div class="a">Um site bem planejado pode melhorar a apresentação da empresa, fortalecer a confiança, facilitar o contato e apoiar o processo comercial. Os resultados dependem também da oferta, do mercado, da divulgação e de outros fatores.</div></details>
+<details name="f"><summary>Como posso contratar a Nordium?<i></i></summary><div class="a">Você pode entrar em contato pelo e-mail <a href="mailto:nordium.co@gmail.com">nordium.co@gmail.com</a> ou pelo Instagram <a href="https://www.instagram.com/nordium.co/" target="_blank" rel="noopener noreferrer">@nordium.co</a> para apresentar sua ideia e conversar sobre as possibilidades do projeto.</div></details>
+</div></div></section>
+
+<section class="cta" id="contato"><div class="w">
+<h2 class="rv">O próximo passo da sua empresa começa com uma boa presença digital.</h2>
+<p class="rv">Vamos construir um site que represente o valor da sua marca, aproxime você dos seus clientes e ajude seu negócio a explorar novas oportunidades.</p>
+<button type="button" class="b bw rv" id="op" aria-haspopup="dialog">Quero desenvolver meu site <svg class="ic"><use href="#ar"/></svg></button>
+<dialog id="dg" aria-labelledby="dgt"><button type="button" class="x" id="dx" aria-label="Fechar">&times;</button><h3 id="dgt">Como prefere falar com a gente?</h3><p>Escolha o canal e conte sobre o seu projeto.</p><div class="ch"><a class="b bp" href="https://www.instagram.com/nordium.co/" target="_blank" rel="noopener noreferrer">Instagram · @nordium.co</a><a class="b bs" target="_blank" rel="noopener noreferrer" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=nordium.co@gmail.com&amp;su=Quero%20desenvolver%20um%20site%20com%20a%20Nordium&amp;body=Ol%C3%A1%2C%20Nordium!%20Quero%20conversar%20sobre%20um%20projeto%20de%20site.%0A%0ANome%3A%0AEmpresa%3A%0AO%20que%20eu%20preciso%3A%0A">E-mail · nordium.co@gmail.com</a></div><p class="no">Outro provedor? <a href="mailto:nordium.co@gmail.com?subject=Quero%20desenvolver%20um%20site%20com%20a%20Nordium">Abrir no aplicativo de e-mail</a></p></dialog>
+</div></section>
+</main>
+<footer><div class="w">
+<div class="fg">
+<div><a class="lg" href="#inicio"><span class="lm" role="img" aria-label="Logo Nordium"></span>NORDIUM</a><p class="mut" style="margin-top:20px;max-width:24em">Design, tecnologia e estratégia para construir uma presença digital com propósito.</p></div>
+<div><h3>Navegação</h3><ul><li><a href="#inicio">Início</a></li><li><a href="#solucoes">Soluções</a></li><li><a href="#processo">Processo</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+<div><h3>Contato</h3><ul><li><a href="mailto:nordium.co@gmail.com">nordium.co@gmail.com</a></li><li><a href="https://www.instagram.com/nordium.co/" target="_blank" rel="noopener noreferrer">Instagram · @nordium.co</a></li></ul></div>
+</div>
+<p class="cp">© <span id="yr">2026</span> Nordium. Todos os direitos reservados.</p>
+</div></footer>
+<script>
+document.documentElement.classList.add('js');
+try{document.getElementById('yr').textContent=new Date().getFullYear()}catch(e){}
+document.querySelectorAll('.rays').forEach(function(s){var h='<g fill="none" stroke="currentColor" stroke-width=".8"><circle r="92"/><circle r="58"/>';for(var i=0;i<16;i++){var a=i*Math.PI/8;h+='<line x1="'+(24*Math.cos(a)).toFixed(1)+'" y1="'+(24*Math.sin(a)).toFixed(1)+'" x2="'+(92*Math.cos(a)).toFixed(1)+'" y2="'+(92*Math.sin(a)).toFixed(1)+'"/>'}s.innerHTML=h+'</g>'});
+var hd=document.getElementById('hd'),nav=document.getElementById('nav'),bm=document.getElementById('bm');
+function sc(){hd.classList.toggle('sc',window.scrollY>8)}sc();addEventListener('scroll',sc,{passive:true});
+function tg(o){nav.classList.toggle('open',o);bm.setAttribute('aria-expanded',o);bm.setAttribute('aria-label',o?'Fechar menu':'Abrir menu')}
+bm.addEventListener('click',function(){tg(!nav.classList.contains('open'))});
+nav.addEventListener('click',function(e){if(e.target.closest('a'))tg(false)});
+addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('open')){tg(false);bm.focus()}});
+var els=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}else{els.forEach(function(e){e.classList.add('in')})}
+var dg=document.getElementById('dg');
+document.getElementById('op').addEventListener('click',function(){if(dg.showModal)dg.showModal();else dg.setAttribute('open','')});
+document.getElementById('dx').addEventListener('click',function(){dg.close?dg.close():dg.removeAttribute('open')});
+dg.addEventListener('click',function(e){if(e.target===dg)dg.close()});
+</script>
+</body>
+</html>
