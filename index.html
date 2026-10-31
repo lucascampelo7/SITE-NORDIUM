@@ -70,12 +70,17 @@ nav a{text-decoration:none;font:500 15px Inter;color:var(--mut);transition:color
 .ph div{height:60px;border-radius:8px;background:linear-gradient(135deg,#DCE5F7,#0B2457)}
 .tag{position:absolute;right:0;bottom:12px;font:500 11px Inter;color:var(--mut)}
 :root{--hi:url(hero.jpg)}
-.hero{background:linear-gradient(90deg,rgba(5,15,38,.6),rgba(5,15,38,.12) 65%),var(--hi) 60% center/cover no-repeat;color:#fff;padding-bottom:clamp(64px,8vw,104px)}
+.hero{background:#050F26;overflow:hidden;isolation:isolate;color:#fff;padding-bottom:clamp(64px,8vw,104px)}
+.hbg{position:absolute;inset:0;z-index:-1;overflow:hidden}
+.hbg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,15,38,.6),rgba(5,15,38,.12) 65%)}
+.hp{position:absolute;top:0;left:0;height:100%;display:flex;animation:pn 110s linear infinite;will-change:transform}
+.hp img{height:100%;width:auto;max-width:none;flex:none;display:block}
+@keyframes pn{to{transform:translateX(-33.3333%)}}
 .hero .eb,.hero .sub{color:rgba(255,255,255,.78)}
 .hero .bs{color:#fff;border-color:rgba(255,255,255,.45)}.hero .bs:hover{border-color:#fff}
 .hero .sd{color:rgba(255,255,255,.75)}.hero .sd i{background:rgba(255,255,255,.3)}.hero .sd i::after{background:#fff}
 .hero .tag{color:rgba(255,255,255,.8)}
-@media (max-width:900px){.hero{background:linear-gradient(rgba(5,15,38,.62),rgba(5,15,38,.45)),var(--hi) 66% center/cover no-repeat}}
+@media (max-width:900px){.hbg::after{background:linear-gradient(rgba(5,15,38,.62),rgba(5,15,38,.45))}}
 /* strip */
 .strip{background:var(--navy);color:#fff;padding:clamp(64px,9vw,112px) 0}
 .strip p{font-size:clamp(1.5rem,3.6vw,2.7rem);font-weight:700;letter-spacing:-.025em;line-height:1.2;max-width:22em}
@@ -200,7 +205,7 @@ dialog h3{font-size:1.5rem;letter-spacing:-.02em;margin:0 0 8px}
 <button class="bm" id="bm" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu"><svg class="ic"><use href="#mn"/></svg></button>
 </div></header>
 <main>
-<section class="hero" id="inicio"><div class="w hg">
+<section class="hero" id="inicio"><div class="hbg" aria-hidden="true"><div class="hp"><img src="hero-strip.jpg" alt=""><img src="hero-strip.jpg" alt=""><img src="hero-strip.jpg" alt=""></div></div><div class="w hg">
 <div>
 <span class="eb rv">Estratégia digital · Design · Desenvolvimento</span>
 <h1 class="rv">O seu negócio em outro <span style="white-space:nowrap">nível. Seja Nordium.</span></h1>
