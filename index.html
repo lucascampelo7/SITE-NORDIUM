@@ -80,7 +80,7 @@ nav a{text-decoration:none;font:500 15px Inter;color:var(--mut);transition:color
 .hero .bs{color:#fff;border-color:rgba(255,255,255,.45)}.hero .bs:hover{border-color:#fff}
 .hero .sd{color:rgba(255,255,255,.75)}.hero .sd i{background:rgba(255,255,255,.3)}.hero .sd i::after{background:#fff}
 .hero .tag{color:rgba(255,255,255,.8)}
-@media (max-width:900px){.hbg::after{background:linear-gradient(rgba(5,15,38,.62),rgba(5,15,38,.45))}}
+@media (max-width:900px){.ht{position:relative}.hbg{inset:calc(-1*clamp(48px,7vw,96px)) -20px -28px -20px}.hbg::after{background:linear-gradient(rgba(5,15,38,.62),rgba(5,15,38,.5) 80%,#050F26)}}
 /* strip */
 .strip{background:var(--navy);color:#fff;padding:clamp(64px,9vw,112px) 0}
 .strip p{font-size:clamp(1.5rem,3.6vw,2.7rem);font-weight:700;letter-spacing:-.025em;line-height:1.2;max-width:22em}
@@ -205,8 +205,8 @@ dialog h3{font-size:1.5rem;letter-spacing:-.02em;margin:0 0 8px}
 <button class="bm" id="bm" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu"><svg class="ic"><use href="#mn"/></svg></button>
 </div></header>
 <main>
-<section class="hero" id="inicio"><div class="hbg" aria-hidden="true"><div class="hp"><img src="hero-strip.jpg" alt=""><img src="hero-strip.jpg" alt=""><img src="hero-strip.jpg" alt=""></div></div><div class="w hg">
-<div>
+<section class="hero" id="inicio"><div class="w hg">
+<div class="ht"><div class="hbg" aria-hidden="true"><div class="hp"><img src="hero-strip.jpg" alt=""><img src="hero-strip.jpg" alt=""><img src="hero-strip.jpg" alt=""></div></div>
 <span class="eb rv">Estratégia digital · Design · Desenvolvimento</span>
 <h1 class="rv">O seu negócio em outro <span style="white-space:nowrap">nível. Seja Nordium.</span></h1>
 <p class="sub rv">Criamos sites modernos, estratégicos e profissionais para fortalecer sua marca, ampliar sua visibilidade e transformar visitantes em novas oportunidades de negócio.</p>
